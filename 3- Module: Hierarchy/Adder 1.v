@@ -13,7 +13,7 @@ module top_module(
     assign b2 = b[31:16];
     
     add16 adder1(.a(a1),
-    	.b(b1),
+    	         .b(b1),
                  .cin(1'b0),
                  .sum(w1),
                  .cout(w3)
