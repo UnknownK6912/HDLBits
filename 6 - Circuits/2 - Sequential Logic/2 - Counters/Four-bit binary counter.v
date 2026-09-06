@@ -1,0 +1,16 @@
+module top_module (
+    input clk,
+    input reset,      // Synchronous active-high reset
+    output [3:0] q);
+
+    reg [3:0] counter;
+    always @(posedge clk) begin
+        if (reset)
+            counter = 0;
+        else
+            counter = counter +1;
+    end
+    
+    assign q = counter;
+    
+endmodule
